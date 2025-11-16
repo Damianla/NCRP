@@ -1,14 +1,40 @@
 # NCRP
-## NCRP：mproving long read classification via neighborhood-consistency refinement and propagation in the overlap graph
+
+NCRP: a graph-based framework for improving long-read metagenomic classification via neighborhood-consistency refinement and label propagation on the overlap graph.
+
 - [Installation](#installation)
   - [With Conda](#with-conda)
     - [From yaml file](#from-yaml-file)
-- [Database](#database)
-- [Testing your PlasChain installation](#testing-your-plaschain-installation)
+- [Input files](#input-files)
+- [Testing your NCRP installation](#testing-your-ncrp-installation)
 - [Basic Usage](#basic-usage)
 - [Main output files](#main-output-files)
 - [Advanced usage](#advanced-usage)
-  - [Plasmid-specific genes](#plasmid-specific-genes)
+  - [Using an edge list instead of PAF](#using-an-edge-list-instead-of-paf)
+  - [Tuning overlap and plotting diagnostics](#tuning-overlap-and-plotting-diagnostics)
 - [Simulation script](#simulation-script)
-  - [Reference Preparation](#reference-preparation)
-  - [Basic Usage](#simulation-basic-usage)
+  - [Reference preparation](#reference-preparation)
+  - [Basic usage](#simulation-basic-usage)
+- [Citation](#citation)
+
+---
+
+## Installation
+
+### With Conda
+
+We recommend installing NCRP in a dedicated conda environment.
+
+#### From yaml file
+
+Create a file called `environment.yml` in the repository root:
+
+```yaml
+name: ncrp
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.8
+  - matplotlib
