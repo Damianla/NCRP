@@ -29,7 +29,7 @@ We recommend installing NCRP in a dedicated conda environment.
 
 Create a file called `environment.yml` in the repository root:
 
-```yaml
+yaml
 name: ncrp
 channels:
   - conda-forge
@@ -41,3 +41,4 @@ dependencies:
 Then create and activate the environment:
 conda env create -f environment.yml
 conda activate ncrp
+### input file
