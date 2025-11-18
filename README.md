@@ -51,6 +51,18 @@ U   read_0002   0       ...
 ```
 2.overlap graph
 
+Building an overlap graph with minimap2(example) 
+
+For long reads(ONT/PacBio HiFi), a typical command is : 
+```
+minimap2 -x ava-ont -t 32 reads.fq reads.fq > overlaps.paf
+```
+or
+```
+minimap2 -x ava-pb -t 32 reads.fq reads.fq > overlaps.paf
+```
+The file overlaps.paf is used by NCRP via --paf.
+
 You can provide the graph in two formats:
 - minimap2 PAF(--paf) : NCRP parses the file and builds an overlap graph,keeping the best overlap for each read pair.
 - Sample edge list(--edges) : a 3-column,tab-delimitered file:
